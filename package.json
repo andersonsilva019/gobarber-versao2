@@ -1,0 +1,12 @@
+{
+  "name": "monorepo-gobarber",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "client/*",
+      "server"
+    ]
+  },
+  "license": "MIT"
+}
