@@ -1,11 +1,8 @@
 import { Router } from 'express';
+import v1 from './v1';
 
-const router = Router();
+const routes = Router();
 
-router.post('/users', (request, response) => {
-  const { name, email } = request.body;
+routes.use('/v1', v1);
 
-  return response.json({ name, email });
-});
-
-export default router;
+export default routes;
