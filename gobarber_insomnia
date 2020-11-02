@@ -1,0 +1,142 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-11-02T20:28:15.636Z",
+  "__export_source": "insomnia.desktop.app:v2020.4.2",
+  "resources": [
+    {
+      "_id": "req_d62d12f2b51648a09f3d0a2e4b89a04c",
+      "parentId": "fld_b0b8576e2a8c43cfb41803c914308121",
+      "modified": 1604343793341,
+      "created": 1604343776943,
+      "url": "{{ base_url }}/appointments",
+      "name": "Listar",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1604343776943,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_b0b8576e2a8c43cfb41803c914308121",
+      "parentId": "wrk_26257a4fc5a941188df5c545d7207d16",
+      "modified": 1604251057945,
+      "created": 1604251057945,
+      "name": "Appointments",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1604251057945,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_26257a4fc5a941188df5c545d7207d16",
+      "parentId": null,
+      "modified": 1604170573672,
+      "created": 1604170573672,
+      "name": "Gobarber versao 2",
+      "description": "",
+      "scope": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_ada8184b212845608f2eb07b9f9c082a",
+      "parentId": "fld_b0b8576e2a8c43cfb41803c914308121",
+      "modified": 1604251655452,
+      "created": 1604251076141,
+      "url": "{{ base_url }}/appointments",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"provider\": \"Anderson Silva\",\n\t\"date\": \"{% now 'iso-8601', '' %}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_06e4f961b38e41a59536cb37d112afdb"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1604251076142,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_0d6a4c00327b3b78ce8bff432d6aa43066fe0297",
+      "parentId": "wrk_26257a4fc5a941188df5c545d7207d16",
+      "modified": 1604249524306,
+      "created": 1604170573717,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:3333/v1"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1604170573717,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_0d6a4c00327b3b78ce8bff432d6aa43066fe0297",
+      "parentId": "wrk_26257a4fc5a941188df5c545d7207d16",
+      "modified": 1604170573719,
+      "created": 1604170573719,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_55063e476cfe4032b9580de7b6831eee",
+      "parentId": "wrk_26257a4fc5a941188df5c545d7207d16",
+      "modified": 1604170573681,
+      "created": 1604170573681,
+      "fileName": "Gobarber versao 2",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_158974dccbba4e8e869a63425d2a8741",
+      "parentId": "env_0d6a4c00327b3b78ce8bff432d6aa43066fe0297",
+      "modified": 1604251129276,
+      "created": 1604251113489,
+      "name": "dev",
+      "data": {
+        "base_url": "http://localhost:3333/v1"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "color": "#3a0eec",
+      "isPrivate": false,
+      "metaSortKey": 1604251113489,
+      "_type": "environment"
+    }
+  ]
+}
