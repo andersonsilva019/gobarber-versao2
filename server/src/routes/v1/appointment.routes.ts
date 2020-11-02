@@ -5,6 +5,11 @@ import AppointmentRepository from '../../repositories/AppointmentRepository';
 const appointmentsRouter = Router();
 const appointmentsRepository = new AppointmentRepository();
 
+appointmentsRouter.get('/', (request, response) => {
+  const appointments = appointmentsRepository.all();
+  return response.json(appointments);
+});
+
 appointmentsRouter.post('/', (request, response) => {
   const { provider, date } = request.body;
 
@@ -15,7 +20,10 @@ appointmentsRouter.post('/', (request, response) => {
     return response.status(409).json({ message: 'Agendamento já existe' });
   }
 
-  const appointment = appointmentsRepository.create(provider, parseDate);
+  const appointment = appointmentsRepository.create({
+    provider,
+    date: parseDate,
+  });
   return response.json(appointment);
 });
 
