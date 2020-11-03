@@ -25,6 +25,7 @@
   ],
   "rules": {
     "prettier/prettier": "error",
+    "class-methods-use-this": "off",
     "implicit-arrow-linebreak": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "import/extensions": [
