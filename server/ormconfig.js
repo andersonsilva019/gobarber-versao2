@@ -6,7 +6,7 @@ module.exports = {
   password: 'docker',
   database: 'gobarberv2',
   migrationsRun: false,
-  synchronize: true,
+  synchronize: false,
   // logging: true,
   // logger: 'advanced-console',
   entities: ['./src/models/*.ts'],
